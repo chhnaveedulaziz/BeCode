@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const path = require("path");
+
+module.exports = {
+  config: path.resolve("dist", "Config/config.js"),
+  "models-path": path.resolve("src", "Models"),
+  "seeders-path": path.resolve("dist", "Database", "Seeders"),
+  "migrations-source-path": path.resolve("dist", "Database", "Migrations"),
+  "migrations-compiled-path": path.resolve("dist", "Database", "Migrations"),
+};

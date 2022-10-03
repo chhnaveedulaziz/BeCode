@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "d13e59f0-321e-4c26-a8f0-3e02374b6416",
+		"name": "payment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "be-payment-api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer sk_test_51LiHqRChJgWYaWzcrySVZz9us38UgJWqGJpWVK11225h4BhuxnvsuDrMGEr2w5k58C3aqzGKGU7sHg6kPHtAa5gy0010qKKvcQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"cardNumber\" : {{$randomCard}},\n    \"month\": {{$randomMonth}},\n    \"year\": {{$randomYear}},\n    \"cvc\": {{$randomCVC}},\n    \"amount\": {{$randomAmount}},\n    \"orderId\": {{$randomInt}}\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/payment/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"payment",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
